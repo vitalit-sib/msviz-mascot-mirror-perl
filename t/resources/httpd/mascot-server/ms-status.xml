@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<msst:ms_status_out xmlns:msst="http://www.matrixscience.com/xmlns/schema/msstatus_1"
+                    majorVersion="1"
+                    minorVersion="1"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.matrixscience.com/xmlns/schema/msstatus_1 ../config/msstatus_1.xsd">
+    <msst:Database Name="contaminants_PAF" Current="yes">
+        <msst:Family>/usr/local/mascot/current/sequence/contaminants_PAF/current/contaminants_PAF_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/contaminants_PAF/current/contaminants_PAF_20130207_1455.fasta</msst:Pathname>
+        <msst:Filename>contaminants_PAF_20130207_1455.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:54Z" numsearches="2"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=2+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=2+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+   <msst:Database Name="custom" Current="yes">
+        <msst:Family>/usr/local/mascot/current/sequence/custom/current/custom_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/custom/current/custom_20150116_0925.fasta</msst:Pathname>
+        <msst:Filename>custom_20150116_0925.fasta</msst:Filename>
+        <msst:State type="Online" time="2015-01-16T08:25:47Z" numsearches="2"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=4+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=4+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="compression">/mascot/x-cgi/ms-status.exe?Show=DB_ERRORS+Database=4+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+    <msst:Database Name="custom" Current="no">
+        <msst:Family>/usr/local/mascot/current/sequence/custom/current/custom_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/custom/current/custom_20141201_1700.fasta</msst:Pathname>
+        <msst:Filename>custom_20141201_1700.fasta</msst:Filename>
+        <msst:State type="Offline" time="2015-01-16T08:25:47Z" numsearches="0"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=4+Which=1+SubCluster=0</msst:uri>
+        <msst:MemMapped>no</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+   <msst:Database Name="NCBInr" Current="yes">
+        <msst:Family>/usr/local/mascot/current/sequence/NCBInr/current/NCBInr_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/NCBInr/current/NCBInr_20131226.fasta</msst:Pathname>
+        <msst:Filename>NCBInr_20131226.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:54Z" numsearches="0"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=13+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=13+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="compression">/mascot/x-cgi/ms-status.exe?Show=DB_ERRORS+Database=13+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="unidentifiedTaxonomy">/mascot/x-cgi/ms-status.exe?Show=TAXONOMY+Database=13+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+    <msst:Database Name="SwissProt_ID" Current="yes">
+        <msst:Family>/usr/local/mascot/mascot2.4/sequence/SwissProt_ID/current/SwissProt_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/SwissProt_ID/current/SwissProt_2014_08.fasta</msst:Pathname>
+        <msst:Filename>SwissProt_2014_08.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:54Z" numsearches="2"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=16+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=16+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="unidentifiedTaxonomy">/mascot/x-cgi/ms-status.exe?Show=TAXONOMY+Database=16+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>yes</msst:MemLocked>
+        <msst:NumberOfThreads>-1</msst:NumberOfThreads>
+    </msst:Database>
+    <msst:Database Name="SwissProt_varsplic" Current="yes">
+        <msst:Family>/usr/local/mascot/current/sequence/SwissProt_varsplic/current/uniprot_sprot_varsplic_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/SwissProt_varsplic/current/uniprot_sprot_varsplic_20131211.fasta</msst:Pathname>
+        <msst:Filename>uniprot_sprot_varsplic_20131211.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:54Z" numsearches="0"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=17+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=17+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="unidentifiedTaxonomy">/mascot/x-cgi/ms-status.exe?Show=TAXONOMY+Database=17+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+    <msst:Database Name="Trembl_ID" Current="yes">
+        <msst:Family>/usr/local/mascot/mascot2.4/sequence/Trembl_ID/current/Trembl_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/Trembl_ID/current/Trembl_2014_08.fasta</msst:Pathname>
+        <msst:Filename>Trembl_2014_08.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:57Z" numsearches="2"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=18+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=18+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="compression">/mascot/x-cgi/ms-status.exe?Show=DB_ERRORS+Database=18+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="unidentifiedTaxonomy">/mascot/x-cgi/ms-status.exe?Show=TAXONOMY+Database=18+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>yes</msst:MemLocked>
+        <msst:NumberOfThreads>-1</msst:NumberOfThreads>
+    </msst:Database>
+    <msst:Database Name="UniProtKB" Current="yes">
+        <msst:Family>/usr/local/mascot/current/sequence/UniProtKB/current/uniprot_*.fasta</msst:Family>
+        <msst:Pathname>/local/mascot_server_2-4_data/sequence/UniProtKB/current/uniprot_2013_12.fasta</msst:Pathname>
+        <msst:Filename>uniprot_2013_12.fasta</msst:Filename>
+        <msst:State type="Online" time="2014-11-28T09:25:54Z" numsearches="0"></msst:State>
+        <msst:uri type="joblist">/mascot/x-cgi/ms-status.exe?Show=JOBLIST+Database=19+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="statistics">/mascot/x-cgi/ms-status.exe?Show=STATISTICS+Database=19+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="compression">/mascot/x-cgi/ms-status.exe?Show=DB_ERRORS+Database=19+Which=0+SubCluster=0</msst:uri>
+        <msst:uri type="unidentifiedTaxonomy">/mascot/x-cgi/ms-status.exe?Show=TAXONOMY+Database=19+Which=0+SubCluster=0</msst:uri>
+        <msst:MemMapped>yes</msst:MemMapped>
+        <msst:RequestedMemMap>yes</msst:RequestedMemMap>
+        <msst:RequestedUnMap>no</msst:RequestedUnMap>
+        <msst:MemLocked>no</msst:MemLocked>
+        <msst:NumberOfThreads>16</msst:NumberOfThreads>
+    </msst:Database>
+</msst:ms_status_out>
