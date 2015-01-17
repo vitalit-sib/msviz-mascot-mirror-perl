@@ -1,12 +1,12 @@
 =head1 NAME
 
-MsViz::Mascot::Mirror::MascotSequences - access mascot database definitions from ms-status.exe
+MsViz::Mascot::Mirror::Mascot - access mascot database definitions from ms-status.exe, runs etc.
 
 
 =head1 SYNOPSIS
 
 
-use MsViz::Mascot::Mirror::MascotSequences;
+use MsViz::Mascot::Mirror::Mascot;
 
 
 =cut

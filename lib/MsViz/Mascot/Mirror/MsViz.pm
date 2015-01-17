@@ -1,11 +1,11 @@
 =head1 NAME
 
-MsViz::Mascot::Mirror::MsVizSequences - access and post sequences from/to MsViz server
+MsViz::Mascot::Mirror::MsViz - access and post sequences, runs etc from/to MsViz server
 
 
 =head1 SYNOPSIS
 
-use MsViz::Mascot::Mirror::MsVizSequences;
+use MsViz::Mascot::Mirror::MsViz;
 
 =cut
 use strict;

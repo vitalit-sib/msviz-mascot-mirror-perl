@@ -8,7 +8,7 @@ use File::Slurp;
 use Test::Most  tests => 4;
 
 BEGIN {
-    use_ok( 'MsViz::Mascot::Mirror::MascotSequences' ) || print "Bail out!\n";
+    use_ok( 'MsViz::Mascot::Mirror::Mascot' ) || print "Bail out!\n";
 }
 
 sub addMockUrl{
