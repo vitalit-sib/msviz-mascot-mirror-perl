@@ -47,30 +47,8 @@ Copyright 2015 SIB Swiss Institute of Bioinformatics
 
 =cut
 
-require Exporter;
-our @ISA = qw/Exporter/;
-our @EXPORT= qw/$URL_MASCOT_SERVER $URL_MSVIZ_SERVER/;
+use MsViz::Mascot::Mirror::Mascot;
+use MsViz::Mascot::Mirror::MsViz;
 
-
-=head1 EXPORT
-
-=head2 Global variables
-
-=head3 $URL_MASCOT_SERVER
-
-Url root to mascot server (such as http://mascot.vital-it.ch/mascot)
-
-=cut
-
-
-our $URL_MASCOT_SERVER;
-
-=head3 $URL_MSVIZ_BACKEND
-
-The url root to msViz server backend (such as http://localhost:9000 in dev mode)
-
-=cut
-
-our $URL_MSVIZ_BACKEND;
 
 1; # End of MsViz::Mascot::Mirror

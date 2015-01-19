@@ -5,7 +5,7 @@ use Test::Mock::LWP::Dispatch;
 use HTTP::Response;
 use LWP::Simple;
 use File::Slurp;
-use Test::Most  tests => 4;
+use Test::Most  tests => 5;
 
 BEGIN {
     use_ok( 'MsViz::Mascot::Mirror::Mascot' ) || print "Bail out!\n";
@@ -33,8 +33,11 @@ is ($ct, "paf le chien\n", 'checking out httpd mock');
 addMockUrl('http://mascot.mock/mascot/x-cgi/ms-status.exe?Show=MS_STATUSXML', 'mascot-server/ms-status.xml');
 
 my @databases = mascotSequenceDbList();
-is(scalar(@databases), 8, 'database array length');
+is(scalar(@databases), 8, 'mascotSequenceDbList: database array length');
 
 is_deeply($databases[7], {'pathName' => '/local/mascot_server_2-4_data/sequence/UniProtKB/current/uniprot_2013_12.fasta',
 			  'fileName' => 'uniprot_2013_12.fasta',
-			  'name' => 'UniProtKB'}, 'db details');
+			  'name' => 'UniProtKB'}, 'mascotSequenceDbList: db details');
+
+@databases = mascotSequenceDbList(notIn=>['contaminants_PAF_20130207_1455.fasta', 'uniprot_2013_12.fasta']);
+is(scalar(@databases), 6, 'mascotSequenceDbList(notI=>[...]');

@@ -1,3 +1,5 @@
+package MsViz::Mascot::Mirror::MsViz;
+
 =head1 NAME
 
 MsViz::Mascot::Mirror::MsViz - access and post sequences, runs etc from/to MsViz server
@@ -10,13 +12,23 @@ use MsViz::Mascot::Mirror::MsViz;
 =cut
 use strict;
 
-use MsViz::Mascot::Mirror;
 use LWP::Simple;
 use JSON::Parse 'parse_json';
 
 require Exporter;
 our @ISA = qw(Exporter);
-our @EXPORT = qw(msVizSequenceDbList); 
+our @EXPORT = qw/msVizSequenceDbList $URL_MSVIZ_SERVER/; 
+
+
+=head2 EXPORT
+
+=head3 $URL_MSVIZ_SERVER
+
+The url root to msViz server backend (such as http://localhost:9000 in dev mode)
+
+=cut
+
+our $URL_MSVIZ_SERVER;
 
 =head1 FUNCTIONS
 
