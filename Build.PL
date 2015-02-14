@@ -14,11 +14,14 @@ my $builder = Module::Build->new(
     build_requires => {
 	'Test::Most' => 0,
 	'Test::Mock::LWP::Dispatch' => 0,
-	'File::Slurp' => 0
+	'File::Slurp' => 00
     },
     requires => {
 	'XML::Twig' => 0,
 	'LWP::Simple' => 0,
+	'HTTP::Request::Common' => 0,
+	'JSON' => 0,
+	'Pod::Usage' => 0,
     },
     add_to_cleanup     => [ 'MsViz-Mascot-Mirror-*' ],
     create_makefile_pl => 'traditional',

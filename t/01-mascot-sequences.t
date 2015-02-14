@@ -5,7 +5,7 @@ use Test::Mock::LWP::Dispatch;
 use HTTP::Response;
 use LWP::Simple;
 use File::Slurp;
-use Test::Most  tests => 5;
+use Test::Most  tests => 6;
 
 BEGIN {
     use_ok( 'MsViz::Mascot::Mirror::Mascot' ) || print "Bail out!\n";
@@ -23,7 +23,6 @@ sub addMockUrl{
 		  });
 }
 
-
 $URL_MASCOT_SERVER='http://mascot.mock/mascot';
 
 addMockUrl('http://example.com', 'hello.txt');
@@ -40,4 +39,7 @@ is_deeply($databases[7], {'pathName' => '/local/mascot_server_2-4_data/sequence/
 			  'name' => 'UniProtKB'}, 'mascotSequenceDbList: db details');
 
 @databases = mascotSequenceDbList(notIn=>['contaminants_PAF_20130207_1455.fasta', 'uniprot_2013_12.fasta']);
-is(scalar(@databases), 6, 'mascotSequenceDbList(notI=>[...]');
+is(scalar(@databases), 6, 'mascotSequenceDbList(notIn=>[...]');
+
+@databases = mascotSequenceDbList(in=>['contaminants_PAF_20130207_1455.fasta', 'uniprot_2013_12.fasta']);
+is(scalar(@databases), 2, 'mascotSequenceDbList(in=>[...]');

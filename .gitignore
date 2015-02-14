@@ -2,3 +2,7 @@ Build
 _build/
 MYMETA*
 blib
+META.*
+*.tar.gz
+Makefile.PL
+ignore.txt

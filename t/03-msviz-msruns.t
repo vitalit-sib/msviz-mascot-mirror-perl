@@ -5,7 +5,7 @@ use Test::Mock::LWP::Dispatch;
 use HTTP::Response;
 use LWP::Simple;
 use File::Slurp;
-use Test::Most  tests => 3;
+use Test::Most  tests => 2;
 
 BEGIN {
     use_ok( 'MsViz::Mascot::Mirror::MsViz' ) || print "Bail out!\n";
@@ -27,9 +27,8 @@ sub addMockUrl{
 $URL_MSVIZ_SERVER='http://msviz.mock';
 
 
-addMockUrl('http://msviz.mock/sequence/list-sources', 'msviz-server/list-sources.js');
+addMockUrl('http://msviz.mock/msrun/list-runids', 'msviz-server/list-runids.js');
 
-my @databases = msVizSequenceDbList();
-is(scalar(@databases), 2, 'database array length');
+my @runs = msVizMsRunListRunIds();
+is(scalar(@runs), 3, 'count msruns');
 
-is($databases[1], 'uniprot_sprot_2015_01.fasta', 'db details');

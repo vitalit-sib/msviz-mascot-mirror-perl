@@ -44,7 +44,9 @@ get a list of existing sequence files on mascot nd a short description
 
 =over 
 
-=item notIn=>Array: will return the database with names not included in the given list (typically, the one laready loaded in MsViz)
+=item notIn=>Array: will return the database with names not included in the given list (typically, the one already loaded in MsViz)
+
+=item in=>Array: will return the database with names  included in the given list
 
 =back
 
@@ -53,35 +55,41 @@ get a list of existing sequence files on mascot nd a short description
 =cut
 
 sub mascotSequenceDbList{
-    my %options = @_;
+  my %options = @_;
 
-    my $url="$URL_MASCOT_SERVER/x-cgi/ms-status.exe?Show=MS_STATUSXML";
+  my $url="$URL_MASCOT_SERVER/x-cgi/ms-status.exe?Show=MS_STATUSXML";
 
-    my $xml=get($url) || die "cannot read $url:$!";
+  my $xml=get($url) || die "cannot read $url:$!";
 
-    my @dbs;
-    my $twig=XML::Twig->new(   
-	twig_handlers => 
-	{ 'msst:Database'   => sub{
-	    my ($twig, $edDb)=@_;
-	    push @dbs, {
-		name => $edDb->att('Name'),
-		fileName => $edDb->first_child( 'msst:Filename')->text(),
-		pathName => $edDb->first_child( 'msst:Pathname')->text()
-	    }
-	  }
-	}
-	);
+  my @dbs;
+  my $twig=XML::Twig->new(   
+			  twig_handlers => 
+			  { 'msst:Database'   => sub{
+			      my ($twig, $edDb)=@_;
+			      push @dbs, {
+					  name => $edDb->att('Name'),
+					  fileName => $edDb->first_child( 'msst:Filename')->text(),
+					  pathName => $edDb->first_child( 'msst:Pathname')->text()
+					 }
+			    }
+			  }
+			 );
 
-    $twig->parsestring($xml) or die "cannot parse content of $url: $!";
+  $twig->parsestring($xml) or die "cannot parse content of $url: $!";
 
-    if($options{notIn}){
-      my %h;
-      $h{$_}=1 foreach @{$options{notIn}};
-      @dbs = grep {!$h{$_->{fileName}}} @dbs;
-    }
+  if ($options{notIn}) {
+    my %h;
+    $h{$_}=1 foreach @{$options{notIn}};
+    @dbs = grep {!$h{$_->{fileName}}} @dbs;
+  }
 
-    wantarray?@dbs:\@dbs;
+  if ($options{in}) {
+    my %h;
+    $h{$_}=1 foreach @{$options{in}};
+    @dbs = grep {$h{$_->{fileName}}} @dbs;
+  }
+
+  wantarray?@dbs:\@dbs;
 }
 
 

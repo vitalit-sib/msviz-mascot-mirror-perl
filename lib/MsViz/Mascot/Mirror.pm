@@ -50,5 +50,4 @@ Copyright 2015 SIB Swiss Institute of Bioinformatics
 use MsViz::Mascot::Mirror::Mascot;
 use MsViz::Mascot::Mirror::MsViz;
 
-
 1; # End of MsViz::Mascot::Mirror
