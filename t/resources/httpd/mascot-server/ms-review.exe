@@ -1,0 +1,144 @@
+
+<HTML>
+<HEAD>
+  <TITLE>Mascot SearchLog</TITLE>  
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>MASCOT search log</H2>
+<table width="100%"><tr>
+<td>Version: 2.5.1 - University of Lausanne   (4FGC-FP2C-JXKE-MCFM-7TEJ)</td>
+</tr></table>
+<FORM ACTION="/mascot/x-cgi/ms-review.exe" METHOD="GET"><INPUT TYPE='submit' VALUE='Sort / filter'>  <INPUT TYPE='hidden' VALUE='1' NAME='CalledFromForm'>  Log File: <input type='text' value='../logs/searches.log' size=20 name='logfile'>  Start at: (-1=end, 1=start) <input type='text' size=3 value='-1' name='start'>  how many: <input type='text' size=3 value='500' name='howMany'> 1066 in log, 1066 after filters.  Data dir:<input type='text' value='' size=10 name='pathToData'> GETs?:<input type='checkbox' checked  name='showGetSeq'><BR>
+<TABLE CELLPADDING=2 CELLSPACING=0 BORDER=0>
+  <TR>
+    <TD><B>Job# </B></TD>
+    <TD><B>PID </B></TD>
+    <TD><B>dbase </B></TD>
+    <TD><B>User Name </B></TD>
+    <TD><B>Email </B></TD>
+    <TD><B>Title </B></TD>
+    <TD><B>In </B></TD>
+    <TD><B>start time </B></TD>
+    <TD><B>Dur </B></TD>
+    <TD><B>Status </B></TD>
+    <TD><B>Pr </B></TD>
+    <TD><B>Typ </B></TD>
+    <TD><B>Enzyme </B></TD>
+    <TD><B>IP </B></TD>
+    <TD><B>User ID </B></TD>
+  </TR>
+  <TR>    <TD><input type='radio' name='column' value='0' CHECKED></TD>
+    <TD><input type='radio' name='column' value='1' ></TD>
+    <TD><input type='radio' name='column' value='2' ></TD>
+    <TD><input type='radio' name='column' value='3' ></TD>
+    <TD><input type='radio' name='column' value='4' ></TD>
+    <TD><input type='radio' name='column' value='5' ></TD>
+    <TD><input type='radio' name='column' value='6' ></TD>
+    <TD><input type='radio' name='column' value='7' ></TD>
+    <TD><input type='radio' name='column' value='8' ></TD>
+    <TD><input type='radio' name='column' value='9' ></TD>
+    <TD><input type='radio' name='column' value='10' ></TD>
+    <TD><input type='radio' name='column' value='11' ></TD>
+    <TD><input type='radio' name='column' value='12' ></TD>
+    <TD><input type='radio' name='column' value='13' ></TD>
+    <TD><input type='radio' name='column' value='14' ></TD>
+  </TR>
+  <TR>    <TD><input type='checkbox' name='s0' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s1' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s2' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s3' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s4' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s5' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s6' value='1' ></TD>
+    <TD><input type='checkbox' name='s7' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s8' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s9' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s10' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s11' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s12' value='1' CHECKED></TD>
+    <TD><input type='checkbox' name='s13' value='1' ></TD>
+    <TD><input type='checkbox' name='s14' value='1' CHECKED></TD>
+  </TR>
+  <TR>    <TD><input type='text' size='6' name='f0' value=''></TD>
+    <TD><input type='text' size='7' name='f1' value=''></TD>
+    <TD><input type='text' size='7' name='f2' value=''></TD>
+    <TD><input type='text' size='26' name='f3' value=''></TD>
+    <TD><input type='text' size='29' name='f4' value=''></TD>
+    <TD><input type='text' size='99' name='f5' value=''></TD>
+    <TD><input type='text' size='2' name='f6' value=''></TD>
+    <TD><input type='text' size='24' name='f7' value=''></TD>
+    <TD><input type='text' size='5' name='f8' value=''></TD>
+    <TD><input type='text' size='12' name='f9' value=''></TD>
+    <TD><input type='text' size='1' name='f10' value=''></TD>
+    <TD><input type='text' size='3' name='f11' value=''></TD>
+    <TD><input type='text' size='5' name='f12' value=''></TD>
+    <TD><input type='text' size='2' name='f13' value=''></TD>
+    <TD><input type='text' size='6' name='f14' value=''></TD>
+  </TR>
+   <TR>    <TD><A HREF="../cgi/master_results_2.pl?file=../data/20120113/F002351.dat">2351</A></TD>
+    <TD>16045</TD>
+    <TD>contamin</TD>
+    <TD></TD>
+    <TD></TD>
+    <TD>one title</TD>
+    <TD><A HREF="xxx">..</A></TD>
+    <TD NOWRAP>Wed Feb 18 15:34:39 2015</TD>
+    <TD>  3</TD>
+    <TD>User read res</TD>
+    <TD>  </TD>
+    <TD>MIS</TD>
+    <TD>Yes</TD>
+    <TD>13</TD>
+    <TD>0</TD>
+  </TR>
+  <TR>    <TD><A HREF="../cgi/master_results_2.pl?file=../data/20120115/F002350.dat">2350</A></TD>
+    <TD>14699</TD>
+    <TD>contamin</TD>
+    <TD></TD>
+    <TD></TD>
+    <TD>other title</TD>
+    <TD><A HREF="xxx">..</A></TD>
+    <TD NOWRAP>Wed Feb 18 15:33:34 2015</TD>
+    <TD>  3</TD>
+    <TD>User read res</TD>
+    <TD>  </TD>
+    <TD>MIS</TD>
+    <TD>Yes</TD>
+    <TD>13</TD>
+    <TD>0</TD>
+  </TR>
+  <TR>    <TD><A HREF="../cgi/master_results_2.pl?file=../data/20130201/F002349.dat">2349</A></TD>
+    <TD>13465</TD>
+    <TD>contamin</TD>
+    <TD></TD>
+    <TD></TD>
+    <TD>third</TD>
+    <TD><A HREF="xxx">..</A></TD>
+    <TD NOWRAP>Wed Feb 18 15:32:28 2015</TD>
+    <TD>  3</TD>
+    <TD>User read res</TD>
+    <TD>  </TD>
+    <TD>MIS</TD>
+    <TD>Yes</TD>
+    <TD>13</TD>
+    <TD>0</TD>
+  </TR>
+  <TR>    <TD><A HREF="../cgi/master_results_2.pl?file=../data/20130606/F002348.dat">2348</A></TD>
+    <TD>29004</TD>
+    <TD>PME5</TD>
+    <TD>trini</TD>
+    <TD>trinidad.martin@isb-sib.ch</TD>
+    <TD>fourth</TD>
+    <TD><A HREF="xxx">..</A></TD>
+    <TD NOWRAP>Wed Feb 18 11:21:15 2015</TD>
+    <TD> 18</TD>
+    <TD>User read res</TD>
+    <TD>  </TD>
+    <TD>MIS</TD>
+    <TD>Yes</TD>
+    <TD>19</TD>
+    <TD>0</TD>
+  </TR>
+</TABLE></FORM>
+</BODY>
+</HTML>

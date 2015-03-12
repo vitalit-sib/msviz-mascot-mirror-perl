@@ -20,18 +20,18 @@ use File::Temp qw/tempfile/;
 
 require Exporter;
 our @ISA = qw(Exporter);
-our @EXPORT = qw/msVizSequenceDbList msVizImportSequences msVizMsRunListRunIds $URL_MSVIZ_SERVER/; 
+our @EXPORT = qw/msVizSequenceDbList msVizImportSequences msVizMsRunListRunIds msVizUploadMzId msVizUploadMGF $URL_MSVIZ_SERVER/; 
 
 
 =head2 EXPORT
 
 =head3 $URL_MSVIZ_SERVER
 
-The url root to msViz server backend (such as http://localhost:9000 in dev mode)
+The url root to msViz server backend (such as http://localhost:9000 in dev mode). It can be default with environment variable $MSVIZ_MSVIZ_SERVER
 
 =cut
 
-our $URL_MSVIZ_SERVER;
+our $URL_MSVIZ_SERVER= $ENV{MSVIZ_MSVIZ_SERVER};;
 
 =head1 FUNCTIONS
 
@@ -61,7 +61,7 @@ get a list of existing msRunId
 sub msVizMsRunListRunIds{
   my %options = @_;
 
-  my $url="$URL_MSVIZ_SERVER/msrun/list-runids";
+  my $url="$URL_MSVIZ_SERVER/msruns";
 
   my $json=get($url) || die "cannot read $url:$!";
 
@@ -90,14 +90,14 @@ opts can contain
 =item remote => host: if resent, the filename will be copied by ssh from the host locally before being forwarded, then deleted (the local copy, don't panic).
 Can be of the form "hostname" or "user@hostname"
 
+=back
+
 =cut
 
 sub msVizImportSequences{
   my $db=shift;
   my %opts = @_;
 
-
-  my $url="$URL_MSVIZ_SERVER/sequences/".$db->{fileName}."/fasta";
 
   my $localFile = $db->{pathName};
   if ($opts{remote}) {
@@ -124,6 +124,39 @@ sub msVizImportSequences{
     }
   }
   
+  from_json(_msVizPOSTContent("sequences/".$db->{fileName}."/fasta", $content));
+}
+
+=head2 msVizUploadMzId(searchId, mzIdContent)
+
+Upload the content of an mzId file
+
+=cut
+
+sub msVizUploadMzId{
+  my ($searchId, $mzIdContent) = @_;
+
+  my $uri = "match/psms/$searchId";
+  _msVizPOSTContent($uri, $mzIdContent);
+}
+
+=head2 msVizUploadMGF(runId, mzIdContent)
+
+Upload the content of an mzIdMGF file
+
+=cut
+
+sub msVizUploadMGF{
+  my ($runId, $mgfContent) = @_;
+
+  my $uri = "exp/msrun/$runId";
+  _msVizPOSTContent($uri, $mgfContent);
+}
+
+sub _msVizPOSTContent {
+  my ($uri, $content)= @_;
+  my $url = "$URL_MSVIZ_SERVER/$uri";
+  
   my $ua = LWP::UserAgent->new();
   my $req =  POST $url,
     Content_Type => 'plain/text',
@@ -131,9 +164,7 @@ sub msVizImportSequences{
   
   my $response = $ua->request($req);
 
-
-  
   die "Error: ", $response->status_line . "\n". $response->content unless $response->is_success;
-  from_json($response->content);
+  $response->content;
 }
 1;

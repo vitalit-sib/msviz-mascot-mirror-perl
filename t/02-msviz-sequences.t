@@ -27,7 +27,7 @@ sub addMockUrl{
 $URL_MSVIZ_SERVER='http://msviz.mock';
 
 
-addMockUrl('http://msviz.mock/sequence/list-sources', 'msviz-server/list-sources.js');
+addMockUrl('http://msviz.mock/sequences/list-sources', 'msviz-server/list-sources.js');
 
 my @databases = msVizSequenceDbList();
 is(scalar(@databases), 2, 'database array length');

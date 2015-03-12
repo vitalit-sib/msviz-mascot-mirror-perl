@@ -9,10 +9,12 @@ t/00-load.t
 t/01-mascot-sequences.t
 t/02-msviz-sequences.t
 t/03-msviz-msruns.t
+t/04-mascot-jobs.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
 bin/mirror-mascot-to-msviz-databases.pl
+bin/mirror-mascot-to-msviz-searches.pl
 Makefile.PL
 META.yml
 META.json

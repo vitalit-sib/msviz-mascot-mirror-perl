@@ -56,8 +56,6 @@ if($listDbs){
     my @msVizDbs=msVizSequenceDbList();
     my %h;
     $h{$_}=1 foreach @msVizDbs;
-    use Data::Dumper;
-    warn Dumper(\%h);
     foreach my $db(mascotSequenceDbList()){
       print "".($h{$db->{fileName}}?'ok         ':'not mirrored')."\t$db->{fileName}\n";
     }

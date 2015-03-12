@@ -27,7 +27,7 @@ sub addMockUrl{
 $URL_MSVIZ_SERVER='http://msviz.mock';
 
 
-addMockUrl('http://msviz.mock/msrun/list-runids', 'msviz-server/list-runids.js');
+addMockUrl('http://msviz.mock/msruns', 'msviz-server/list-runids.js');
 
 my @runs = msVizMsRunListRunIds();
 is(scalar(@runs), 3, 'count msruns');
