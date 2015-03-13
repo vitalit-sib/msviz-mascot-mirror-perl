@@ -158,6 +158,7 @@ sub _msVizPOSTContent {
   my $url = "$URL_MSVIZ_SERVER/$uri";
   
   my $ua = LWP::UserAgent->new();
+  $ua->timeout(1200);
   my $req =  POST $url,
     Content_Type => 'plain/text',
     Content      =>  $content ;

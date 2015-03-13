@@ -33,6 +33,7 @@ Mirror search results from a mascot server to a MsViz server
 
 =item --list: print the available search jobs
 
+=item --jobs=id1[,id2,...] the list of jobs to import (--list and --jobs=... are exclusive)
 
 =back 
 
@@ -66,7 +67,7 @@ if($list){
 }
 
 foreach my $jid (split /,/, $jobs){
-  $jid = sprinf("F%6.6d", $jid) unless $jid =~ /F\d{6}/;
+  $jid = sprintf("F%6.6d", $jid) unless $jid =~ /F\d{6}/;
   
   my $job = mascotJob($jid);
   my $searchId="mascot:$job->{jobId}";
@@ -75,7 +76,11 @@ foreach my $jid (split /,/, $jobs){
   my $mgf = mascotJobMGF($jid);
   print "retieving mzId for $job->{jobId}\n";
   my $mzId = mascotJobMzId($jid);
-    
+
+  open my $FD, '>', '/tmp/a.mgf';
+  print $FD $mgf;
+  close $FD;
+  
   print "uploading MGF $searchId\n";
   my $resp = msVizUploadMGF($searchId, $mgf);  print $resp;
   print "uploading psms $searchId\n";
