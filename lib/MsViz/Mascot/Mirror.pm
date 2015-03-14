@@ -3,7 +3,7 @@ use strict;
 
 =head1 NAME
 
-MsViz::Mascot::Mirror - The great new MsViz::Mascot::Mirror!
+MsViz::Mascot::Mirror - Mirroring data between a mascot and msViz servers
 
 =head1 VERSION
 
@@ -35,7 +35,8 @@ Alexandre Masselot, C<< <alexandre.masselot at isb-sib.com> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to 
+Please report any bugs or feature requests to https://github.com/vitalit-sib/msviz-backend/issues
+
 
 =head1 SUPPORT
 
@@ -44,7 +45,7 @@ You can find documentation for this module with the perldoc command.
     perldoc MsViz::Mascot::Mirror
 
 
-
+Source code can be found at https://github.com/vitalit-sib/msviz-mascot-mirror-perl
 
 =head1 ACKNOWLEDGEMENTS
 
