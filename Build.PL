@@ -14,7 +14,8 @@ my $builder = Module::Build->new(
 				 build_requires => {
 						    'Test::Most' => 0,
 						    'Test::Mock::LWP::Dispatch' => 0,
-						    'File::Slurp' => 00
+						    'File::Slurp' => 0,
+						    'TAP::Formatter::JUnit' => 0
 						   },
 				 requires => {
 					      'XML::Twig' => 0,

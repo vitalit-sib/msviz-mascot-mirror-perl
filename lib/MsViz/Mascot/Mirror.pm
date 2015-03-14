@@ -16,6 +16,14 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
+   export MSVIZ_MASCOT_SERVER=http://mascot.domain.ch/mascot
+   export MSVIZ_MSVIZ_SERVER=http://mzviz.domain.ch/backend
+
+   mirror-mascot-to-msviz-databases.pl  --list
+
+   mirror-mascot-to-msviz-databases.pl --import-only=SwissProt_2014_08.fasta
+
+   mirror-mascot-to-msviz-searches.pl --jobs=F000456,F000789
 
 =head1 
 

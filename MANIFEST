@@ -15,6 +15,3 @@ t/pod-coverage.t
 t/pod.t
 bin/mirror-mascot-to-msviz-databases.pl
 bin/mirror-mascot-to-msviz-searches.pl
-Makefile.PL
-META.yml
-META.json
