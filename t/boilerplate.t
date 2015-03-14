@@ -3,7 +3,7 @@ use strict;
 use warnings FATAL => 'all';
 use Test::More;
 
-plan tests => 3;
+plan tests => 1;
 
 sub not_in_file_ok {
     my ($filename, %regex) = @_;
