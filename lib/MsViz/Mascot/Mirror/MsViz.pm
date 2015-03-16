@@ -114,17 +114,17 @@ sub msVizImportSequences{
     }
   }
 
-  my $content;
-  {
-    local $/;
-    open my $FD, '<', $localFile or die "cannot open file for reading: $!";
-    $content=<$FD>;
-    if ($opts{remote}) {
-      unlink $localFile;
-    }
-  }
+  # my $content;
+  # {
+  #   local $/;
+  #   open my $FD, '<', $localFile or die "cannot open file for reading: $!";
+  #   $content=<$FD>;
+  #   if ($opts{remote}) {
+  #     unlink $localFile;
+  #   }
+  # }
   
-  from_json(_msVizCurlPOSTFile("sequences/".$db->{fileName}."/fasta", $content));
+  from_json(_msVizCurlPOSTFile("sequences/".$db->{fileName}."/fasta", $localFile));
 }
 
 =head2 msVizUploadMzId(searchId, mzIdContent)
