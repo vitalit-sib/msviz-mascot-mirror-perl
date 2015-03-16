@@ -158,8 +158,8 @@ sub  _msVizCurlPOSTFile {
   my ($uri, $file)= @_;
   my $url = "$URL_MSVIZ_SERVER/$uri";
 
-  my $cmd = "curl ";
-  warn "curl -X POST --data-binary \@$file $url";
+  my $cmd = "curl -X POST --data-binary \@$file $url\n";
+  warn "$cmd\n"
 
   my $ret = `$cmd` or die "cannot execute $cmd";
   $ret;
