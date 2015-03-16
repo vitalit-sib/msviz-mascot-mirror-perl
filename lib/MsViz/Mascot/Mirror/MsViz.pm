@@ -124,7 +124,7 @@ sub msVizImportSequences{
     }
   }
   
-  from_json(_msVizPOSTContent("sequences/".$db->{fileName}."/fasta", $content));
+  from_json(_msVizCurlPOSTFile("sequences/".$db->{fileName}."/fasta", $content));
 }
 
 =head2 msVizUploadMzId(searchId, mzIdContent)
@@ -151,6 +151,19 @@ sub msVizUploadMGF{
 
   my $uri = "exp/msrun/$runId";
   _msVizPOSTContent($uri, $mgfContent);
+}
+
+
+sub  _msVizCurlPOSTFile {
+  my ($uri, $file)= @_;
+  my $url = "$URL_MSVIZ_SERVER/$uri";
+
+  my $cmd = "curl ";
+  warn "curl -X POST --data-binary \@$file";
+
+  my $ret = `$cmd` or die "cannot execute $cmd";
+  $ret;
+
 }
 
 sub _msVizPOSTContent {
