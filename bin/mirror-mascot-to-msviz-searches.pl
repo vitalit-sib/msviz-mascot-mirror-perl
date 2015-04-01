@@ -82,9 +82,11 @@ foreach my $jid (split /,/, $jobs){
   close $FD;
   
   print "uploading MGF $searchId\n";
-  my $resp = msVizUploadMGF($searchId, $mgf);  print $resp;
+  my $resp = msVizUploadMGF($searchId, $mgf);
+  print "$resp\n";
   print "uploading psms $searchId\n";
   my $resp = msVizUploadMzId($searchId, $mzId);
+  print "$resp\n";
 }
 
 
