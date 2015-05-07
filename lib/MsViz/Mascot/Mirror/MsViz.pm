@@ -136,7 +136,7 @@ Upload the content of an mzId file
 sub msVizUploadMzId{
   my ($searchId, $mzIdContent) = @_;
 
-  my $uri = "match/psms/$searchId";
+  my $uri = "search/$searchId";
   _msVizPOSTContent($uri, $mzIdContent);
 }
 
