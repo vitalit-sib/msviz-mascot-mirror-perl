@@ -70,7 +70,7 @@ foreach my $jid (split /,/, $jobs){
   $jid = sprintf("F%6.6d", $jid) unless $jid =~ /F\d{6}/;
   
   my $job = mascotJob($jid);
-  my $searchId="mascot:$job->{jobId}";
+  my $searchId="$job->{jobId}";
   
   print "retieving mzIdMGF for $job->{jobId}\n";
   my $mgf = mascotJobMGF($jid);
